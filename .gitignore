@@ -7,3 +7,7 @@
 
 # .tfvars files
 *.tfvars
+
+# go compiled files
+CICD/modules/lambda/main
+CICD/modules/lambda/main.zip
