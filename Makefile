@@ -9,8 +9,8 @@ init:
 	terraform init -var-file=$(VAR_FILE)
 
 clean:
-	rm CICD/modules/lambda/src/main
-	rm CICD/modules/lambda/src/main.zip
+	rm CICD/modules/lambda/cmd/main
+	rm CICD/modules/lambda/cmd/main.zip
 
 create-base:
 	terraform workspace select $(APPLICATION)-$(ENV)-$(COLOR)-$(REGION)
