@@ -59,9 +59,8 @@ resource "aws_lambda_function" "lambda" {
     function_name     = "${var.application}-${var.env}-${var.color}-cicd-lambda-${data.aws_region.current.name}"
     handler           = "main"
     role              = "${aws_iam_role.lambda.arn}"
-    filename          = "./modules/lambda/main.zip"
-    source_code_hash  = "${filebase64sha256("./modules/lambda/main.zip")}"
+    filename          = "./modules/lambda/cmd/main.zip"
+    source_code_hash  = "${filebase64sha256("./modules/lambda/cmd/main.zip")}"
     runtime           = "go1.x"
     depends_on        = ["aws_cloudwatch_log_group.lambda"]
-
 }
