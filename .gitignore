@@ -9,8 +9,8 @@
 *.tfvars
 
 # go compiled files
-CICD/modules/lambda/main
-CICD/modules/lambda/main.zip
+CICD/modules/lambda/cmd/main
+CICD/modules/lambda/cmd/main.zip
 
 # IDE
 *.idea*
